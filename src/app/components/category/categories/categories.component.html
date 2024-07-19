@@ -1,0 +1,12 @@
+<p>categories works!</p>
+<table>
+    <tr>
+        <th>CATEGORY NAME</th>
+    </tr>
+    @for (category of categories; track $index) {
+        <tr>
+            <td>{{category.name}}</td>
+        </tr>
+    }
+    
+</table>

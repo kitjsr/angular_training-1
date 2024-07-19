@@ -1,0 +1,77 @@
+<p>xyz works!</p>
+<!-- <h1>{{name}}</h1>
+<h2>{{roll}}</h2>
+<h3>{{status}}</h3>
+<h4>{{students}}</h4>
+<h4>{{students[0]}}</h4>
+<h5>{{details.name}}</h5>
+<h5>{{details.roll}}</h5>
+<h4>{{datas[0].name}}</h4>
+<h4>{{datas[0].roll}}</h4>
+<h4>{{datas[1].name}}</h4>
+<h4>{{datas[1].roll}}</h4> -->
+<link rel="stylesheet" href="xyz.component.css">
+@if(isSuccess) 
+{
+    <div class="alert alert-success">
+        Successfully submitted
+    </div>
+}
+@else{
+    <div class="alert alert-danger">
+        Something Wrong
+    </div>
+}
+@if(no==1){
+    Intelligent
+}
+@else if (no==2) {
+    Smart
+}
+@else {
+    Good
+}
+@switch (choice) {
+    @case (1) {
+        Monday
+    }
+    @case (2) {
+        Tuesday
+    }
+    @case (3) {
+        Wednesday
+    }
+    @case (4) {
+        Thursday
+    }
+    @case (5) {
+        Friday
+    }
+    @case (6) {
+        Saturday
+    }
+    @case (7) {
+        Sunday
+    }
+    @default {
+        Wrong Choice
+    }
+}
+@for (student of students; track $index) {
+    <p>{{student}}</p>
+}
+<ul>
+    @for (student of students; track $index) {
+        <li>{{student}}</li>
+    }
+</ul>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+    </tr>
+    @for (student of students; track $index) {
+        <tr>
+            <td>{{student}}</td>
+        </tr>
+    }
+</table>

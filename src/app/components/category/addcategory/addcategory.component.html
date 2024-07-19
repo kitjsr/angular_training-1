@@ -1,0 +1,15 @@
+<p>addcategory works!</p>
+<form [formGroup]="reg" (ngSubmit)="onSubmit()">
+    <label>Publisher Name</label>
+    <input type="text" formControlName="name" class="form-control"
+    [ngClass]="{'is-invalid':submitted && f['name'].errors}"/>
+    @if (submitted && f['name'].errors) {
+        @if (f['name'].errors['required']) 
+        {
+            <div>Name is mandatory</div>
+        }
+    }
+    
+    
+    <button type="submit" class="btn-success">Register</button>
+</form>

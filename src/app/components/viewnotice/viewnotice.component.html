@@ -1,0 +1,20 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table>
+                    @for (notice of notices; track $index) {
+                        <tr>
+                            <td>{{notice.title}}
+                                @if (notice.new=='1') {
+                                    <img src="http://gpadp.org.in/new.gif" alt="">
+                                }
+                            </td>
+                            <td><a href="https://gpadp.org.in/admin/uploads/{{notice.notice}}">Download</a></td>
+                        </tr>        
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

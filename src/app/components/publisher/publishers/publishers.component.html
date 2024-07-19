@@ -1,0 +1,18 @@
+<p>publishers works!</p>
+<table>
+    <tr>
+        <th>PUBLISHER NAME</th>
+        <th>MOBILE</th>
+        <th>E-MAIL</th>
+        <th>ADDRESS</th>
+    </tr>
+    @for (publisher of publishers; track $index) {
+        <tr>
+            <td>{{publisher.name}}</td>
+            <td>{{publisher.mobile}}</td>
+            <td>{{publisher.email}}</td>
+            <td>{{publisher.address}}</td>
+        </tr>
+    }
+    
+</table>
